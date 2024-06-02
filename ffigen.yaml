@@ -1,0 +1,19 @@
+# Run with `flutter pub run ffigen --config ffigen.yaml`.
+name: SciMathsBindings
+description: |
+  Bindings for `src/sci_maths.h`.
+
+  Regenerate bindings with `flutter pub run ffigen --config ffigen.yaml`.
+output: 'lib/sci_maths_bindings_generated.dart'
+headers:
+  entry-points:
+    - 'src/sci_maths.h'
+  include-directives:
+    - 'src/sci_maths.h'
+preamble: |
+  // ignore_for_file: always_specify_types
+  // ignore_for_file: camel_case_types
+  // ignore_for_file: non_constant_identifier_names
+comments:
+  style: any
+  length: full
